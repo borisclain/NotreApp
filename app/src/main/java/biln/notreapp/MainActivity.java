@@ -9,8 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/*
+MainActivity est l'activité principale de l'app. Elle correspond à l'écran d'accueil que
+l'utilisateur verra après la première connexion.
 
-// commentaire sur l'activité
+
+
+ */
+
+
+
+
+
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     Button buttonSearch;
