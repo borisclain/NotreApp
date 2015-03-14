@@ -6,5 +6,7 @@
     <string name="button2"> Consulter mes événements  </string>
     <string name="text"> Texte affiché avant résultat de recherche</string>
     <string name="fatal_error">FATAL ERROR!!</string>
+    <string name="pref_previously_started"></string>
+
 
 </resources>

@@ -1,6 +1,7 @@
 package biln.notreapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -8,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.preference.PreferenceManager;
 
 /*
 MainActivity est l'activité principale de l'app. Elle correspond à l'écran d'accueil que
@@ -16,6 +18,7 @@ l'utilisateur verra après la première connexion.
 Test de commit
 
  */
+
 
 
 
@@ -44,6 +47,33 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         buttonSearch.setOnClickListener(this);
         buttonConsult.setOnClickListener(this);
     }
+
+    protected void onResume(){
+        super.onResume();  // Always call the superclass method first
+
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        boolean previouslyStarted = prefs.getBoolean(getString(R.string.pref_previously_started), false);
+        SharedPreferences.Editor edit = prefs.edit();
+        if(!previouslyStarted){
+            Toast.makeText(this, "Premiere fois", Toast.LENGTH_LONG).show();
+            edit.putBoolean(getString(R.string.pref_previously_started), Boolean.TRUE);
+            edit.commit();
+            Intent i = new Intent(this, WelcomingActivity.class);
+            startActivity(i);
+
+        }
+
+
+
+        //TODO: À enlever quand on sera content de l'écran de première connexion
+        edit.clear() ;
+        edit.commit();
+
+
+    }
+
+
 
 
     @Override
