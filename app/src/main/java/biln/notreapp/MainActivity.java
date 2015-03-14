@@ -21,9 +21,6 @@ Test de commit
 
 
 
-
-
-
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     Button buttonSearch;
@@ -49,8 +46,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
 
     protected void onResume(){
-        super.onResume();  // Always call the superclass method first
-
+        super.onResume();
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         boolean previouslyStarted = prefs.getBoolean(getString(R.string.pref_previously_started), false);
@@ -65,10 +61,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         }
 
 
-
+        /*
+        Les deux lignes suivantes s'occupent de vider les préférences. En vidant les préférances,
+        on aura l'écran de première connexion à chaque exécution de l'app.
+         */
         //TODO: À enlever quand on sera content de l'écran de première connexion
-        edit.clear() ;
-        edit.commit();
+        //edit.clear() ;
+        //edit.commit();
 
 
     }
