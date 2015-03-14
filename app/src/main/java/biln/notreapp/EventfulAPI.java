@@ -31,7 +31,7 @@ public class EventfulAPI {
 
     String apiKey = "b5JxXhsHhJTW2mzP";
 
-    EventfulAPI() {
+    public EventfulAPI() {
         erreur = null;
 
         String url = "http://api.eventful.com/json/events/search?app_key="+apiKey+"&keywords=books&location=Montreal&date=Future";
