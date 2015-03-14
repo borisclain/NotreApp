@@ -13,7 +13,7 @@ import android.widget.Toast;
 MainActivity est l'activité principale de l'app. Elle correspond à l'écran d'accueil que
 l'utilisateur verra après la première connexion.
 
-
+Test de commit
 
  */
 
