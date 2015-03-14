@@ -16,3 +16,16 @@ et moi avons travaillé ça jeudi.
 
 DONC QUAND VOUS FAITES UN PUSH VERS CE REPOSITORY SUR GITHUB, ASSUREZ-VOUS DE NE COCHER QUE CE QUI
 EST DANS LE DOSSIER app/src
+
+
+
+GOOGLE PLAY SERVICES :
+le manifest est dans le partage, donc ça devrait aller
+Mais le buiild_gradle, non!
+Donc: 
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.google.android.gms:play-services:6.5.87'  //nouvelle regle pour googlePlay
+}
+dans le build.gradle
