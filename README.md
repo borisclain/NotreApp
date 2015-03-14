@@ -6,8 +6,8 @@ Ne jamais pousser directement sur master s'il vous-plaît.
 
 
 IMPORTANT: 
-Ne partager que le dossier app/src et le fichier .gitignore
-(il contient tous les fichiers java, ainsi que le manifest Android, ainsi que les ressources xml) 
+Ne partager que le dossier app/src et le fichier (il contient tous les fichiers java, ainsi que le manifest Android, ainsi que les ressources xml) et le fichier .gitignore.
+
 Mais ne jamais pousser et partager entre nous quelque chose qui est à l'extérieur du dossier "app", 
 en particulier: le dossier "idea". Si on partage le dossier "idea" on se partage des fichiers de 
 configuration de l'éditeur AndroidStudio, et ça a mené à des conflits sur ma machine depuis que Nassym
